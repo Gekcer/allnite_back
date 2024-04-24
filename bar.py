@@ -19,6 +19,7 @@ class Bar:
         names = []
         for bar in cls.get_all_bars():
             names.append(bar['name'])
+        return names
 
     def __str__(self):
         return f'Название: {self.name}\nСсылка: {self.url}'

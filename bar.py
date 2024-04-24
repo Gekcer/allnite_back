@@ -23,8 +23,3 @@ class Bar:
     def __str__(self):
         return f'Название: {self.name}\nСсылка: {self.url}'
 
-if __name__ == '__main__':
-    print(Bar.get_all_bars())
-    print([Bar(x['name'], x['url']) for x in Bar.get_all_bars()])
-    bar1 = Bar(1, 2)
-    print(bar1)

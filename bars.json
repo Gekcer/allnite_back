@@ -1,6 +1,256 @@
 [
-    {
-      "name": "test",
-      "url": "event.search_test"
-    }
+ {
+  "Заведения": "Sgt. PEPPER’S bar",
+  "Instagram": "https:\/\/www.instagram.com\/sgtpeppersbar\/",
+  "Vk": "https:\/\/vk.com\/sgtpeppersbar",
+  "Telegram": "https:\/\/t.me\/sgtpeppersbar"
+ },
+ {
+  "Заведения": "The Rock Bar",
+  "Instagram": "https:\/\/www.instagram.com\/therockbar\/",
+  "Vk": "https:\/\/vk.com\/rockbar",
+  "Telegram": "https:\/\/t.me\/therockbar"
+ },
+ {
+  "Заведения": "The Rock Bar Small",
+  "Instagram": "https:\/\/www.instagram.com\/therockbar_smallstag",
+  "Vk": "https:\/\/vk.com\/rockbar_smallstage",
+  "Telegram": "https:\/\/t.me\/rockbarsmallstage"
+ },
+ {
+  "Заведения": "Wilson Pub",
+  "Instagram": "https:\/\/www.instagram.com\/wilsonpub",
+  "Vk": "https:\/\/vk.com\/wilsonpub",
+  "Telegram": "https:\/\/t.me\/wilsonpub"
+ },
+ {
+  "Заведения": "Архитектор",
+  "Instagram": "https:\/\/www.instagram.com\/architector.cafe_bar\/",
+  "Vk": "https:\/\/vk.com\/architectorbar",
+  "Telegram": "https:\/\/t.me\/architectorbar"
+ },
+ {
+  "Заведения": "Фанки Бар",
+  "Instagram": "https:\/\/www.instagram.com\/funkybar_\/",
+  "Vk": "https:\/\/vk.com\/funkybarkrd",
+  "Telegram": "https:\/\/t.me\/funkybar_krd"
+ },
+ {
+  "Заведения": "НАХЛЕБНИК",
+  "Instagram": "https:\/\/www.instagram.com\/nahlebnik_bar\/",
+  "Vk": "https:\/\/vk.com\/nahlebnikbar"
+ },
+ {
+  "Заведения": "Детектив, где вы?",
+  "Instagram": "https:\/\/www.instagram.com\/detektiv_gde_vi",
+  "Vk": "https:\/\/vk.com\/detektivgdev",
+  "Telegram": "https:\/\/t.me\/detektivgdevi"
+ },
+ {
+  "Заведения": "ВИДЕОСАЛОН ЗАКРЫТ ",
+  "Instagram": "https:\/\/www.instagram.com\/barvideosalon\/",
+  "Vk": "https:\/\/vk.com\/barvideosalon",
+  "Telegram": "https:\/\/t.me\/barvideosalon"
+ },
+ {
+  "Заведения": "Harat's",
+  "Instagram": "https:\/\/www.instagram.com\/harats_krasnaya_str",
+  "Vk": "https:\/\/vk.com\/haratspubkrasnodar",
+  "Telegram": "https:\/\/t.me\/haratskrasnodar"
+ },
+ {
+  "Заведения": "Amsterdam",
+  "Vk": "https:\/\/vk.com\/amsterdambar"
+ },
+ {
+  "Заведения": "Мr Drunке Ваr",
+  "Instagram": "https:\/\/www.instagram.com\/mr_drunkebar\/",
+  "Vk": "https:\/\/vk.com\/drunkebar"
+ },
+ {
+  "Заведения": "Apollo\/Hopkins etc.",
+  "Instagram": "Отсутствуют ивенты (либо сомнительно)у всей сети https:\/\/www.instagram.com\/hopkins_bar"
+ },
+ {
+  "Заведения": "Барный Союз(Публика)",
+  "Instagram": "https:\/\/www.instagram.com\/publika_souzbar\/"
+ },
+ {
+  "Заведения": "F⭕️CUS bar",
+  "Instagram": "https:\/\/www.instagram.com\/focus.bar\/"
+ },
+ {
+  "Заведения": "CULT",
+  "Instagram": "https:\/\/www.instagram.com\/cult.106",
+  "Vk": "Немного не понятно что это",
+  "Telegram": "https:\/\/t.me\/cult106"
+ },
+ {
+  "Заведения": "🕊 Счастье",
+  "Instagram": "https:\/\/www.instagram.com\/bar_happiness\/",
+  "Telegram": "https:\/\/t.me\/bar_happinesss"
+ },
+ {
+  "Заведения": "Beat Love - Закрылся?",
+  "Instagram": "https:\/\/www.instagram.com\/beatlove_bar\/"
+ },
+ {
+  "Заведения": "Namesti",
+  "Instagram": "https:\/\/www.instagram.com\/namestikrd\/",
+  "Vk": "https:\/\/vk.com\/namestipabkrd",
+  "Telegram": "https:\/\/t.me\/namestikrd"
+ },
+ {
+  "Заведения": "Виновник",
+  "Instagram": "https:\/\/www.instagram.com\/vinovnik_dance_bar\/",
+  "Vk": "https:\/\/vk.com\/vinovnik_bar",
+  "Telegram": "https:\/\/t.me\/vinovnikkrd"
+ },
+ {
+  "Заведения": "Block House ",
+  "Instagram": "https:\/\/www.instagram.com\/blockhouseclub_official",
+  "Vk": "https:\/\/vk.com\/blockhouseclub_official",
+  "Telegram": "https:\/\/t.me\/block_housekrd"
+ },
+ {
+  "Заведения": "Шахта ",
+  "Instagram": "https:\/\/www.instagram.com\/night_club_shakhta\/"
+ },
+ {
+  "Заведения": "Бенуаръ ",
+  "Instagram": "https:\/\/www.instagram.com\/benoir_showclub_krd\/"
+ },
+ {
+  "Заведения": "Sky bar",
+  "Instagram": "https:\/\/www.instagram.com\/skybarkrasnodar\/",
+  "Vk": "https:\/\/vk.com\/skybarkrasnodar"
+ },
+ {
+  "Заведения": "Ля-мажор",
+  "Instagram": "https:\/\/www.instagram.com\/lamajor_krasnodar\/",
+  "Vk": "https:\/\/vk.com\/lamajor_krd"
+ },
+ {
+  "Заведения": "Главная сцена",
+  "Instagram": "https:\/\/www.instagram.com\/glavnaya_scena\/",
+  "Vk": "https:\/\/vk.com\/glavnaya_scena"
+ },
+ {
+  "Заведения": "Перец",
+  "Instagram": "https:\/\/www.instagram.com\/perec_karaoke\/",
+  "Telegram": "https:\/\/t.me\/perec_karaoke"
+ },
+ {
+  "Заведения": "Nebar",
+  "Instagram": "https:\/\/www.instagram.com\/nebar.kras\/",
+  "Vk": "https:\/\/vk.com\/nebar.kras"
+ },
+ {
+  "Заведения": "Zажигалка",
+  "Instagram": "https:\/\/www.instagram.com\/zajigalka_krd23\/"
+ },
+ {
+  "Заведения": "Поколение",
+  "Instagram": "https:\/\/www.instagram.com\/pokolenie_bar\/",
+  "Vk": "https:\/\/vk.com\/pokolenie_bar"
+ },
+ {
+  "Заведения": "Бюро дезинформации ",
+  "Instagram": "https:\/\/www.instagram.com\/dezinfobar\/",
+  "Vk": "https:\/\/vk.com\/dezinfobar",
+  "Telegram": "https:\/\/t.me\/dezinfobar"
+ },
+ {
+  "Заведения": "Hank ",
+  "Instagram": "https:\/\/www.instagram.com\/hank.rest\/",
+  "Vk": "https:\/\/vk.com\/hank.restoran",
+  "Telegram": "https:\/\/t.me\/hankrest"
+ },
+ {
+  "Заведения": "Kulibin pub ",
+  "Instagram": "https:\/\/www.instagram.com\/kulibin.pub\/",
+  "Vk": "https:\/\/vk.com\/kulibinpub",
+  "Telegram": "https:\/\/t.me\/kulibinpub\/"
+ },
+ {
+  "Заведения": "Macgregor`s pub",
+  "Instagram": "https:\/\/www.instagram.com\/macgregors_krd\/",
+  "Vk": "https:\/\/vk.com\/macgregor",
+  "Telegram": "https:\/\/t.me\/macgregorspub"
+ },
+ {
+  "Заведения": "Холостяк романтик",
+  "Instagram": "https:\/\/www.instagram.com\/holostyak74\/",
+  "Vk": "https:\/\/vk.com\/holostyak_romantiki"
+ },
+ {
+  "Заведения": "Синий ",
+  "Instagram": "https:\/\/www.instagram.com\/sinii_bar\/"
+ },
+ {
+  "Заведения": "Люстра Бар",
+  "Instagram": "https:\/\/www.instagram.com\/lustra_bar\/"
+ },
+ {
+  "Заведения": "Ambre",
+  "Instagram": "https:\/\/www.instagram.com\/ambre.cafe.bar",
+  "Vk": "https:\/\/vk.com\/ambrecafebar"
+ },
+ {
+  "Заведения": "Питчер паб ",
+  "Instagram": "https:\/\/www.instagram.com\/pitcherpub_krd",
+  "Vk": "https:\/\/vk.com\/pitcherpub_krd",
+  "Telegram": "https:\/\/t.me\/pictherpub"
+ },
+ {
+  "Заведения": "Studio64 ",
+  "Instagram": "https:\/\/www.instagram.com\/studio64krasnodar",
+  "Vk": "https:\/\/vk.com\/studio64krasnodar",
+  "Telegram": "https:\/\/t.me\/studio64krasnodar"
+ },
+ {
+  "Заведения": "Zohanbar ",
+  "Instagram": "https:\/\/www.instagram.com\/zohanbar"
+ },
+ {
+  "Заведения": "Cicada ",
+  "Instagram": "https:\/\/www.instagram.com\/cicada.kitch.bar"
+ },
+ {
+  "Заведения": "Епт ",
+  "Instagram": "https:\/\/www.instagram.com\/ept.bar",
+  "Vk": "https:\/\/vk.com\/ept_gastropub",
+  "Telegram": "https:\/\/t.me\/ept_bar"
+ },
+ {
+  "Заведения": "Химера ",
+  "Instagram": "https:\/\/www.instagram.com\/himera_bar",
+  "Vk": "https:\/\/vk.com\/himera_bar"
+ },
+ {
+  "Заведения": "Ff90 ",
+  "Instagram": "https:\/\/www.instagram.com\/ff90.krd",
+  "Telegram": "https:\/\/t.me\/FF90krd"
+ },
+ {
+  "Заведения": "Волна ",
+  "Instagram": "https:\/\/www.instagram.com\/volna_rumochnaya\/"
+ },
+ {
+  "Заведения": "Временный бар ",
+  "Instagram": "https:\/\/www.instagram.com\/vremenny.bar\/"
+ },
+ {
+  "Заведения": "Franky Woobar ",
+  "Instagram": "https:\/\/www.instagram.com\/franky_woobar_x.o\/"
+ },
+ {
+  "Заведения": "Горький бар",
+  "Instagram": "https:\/\/www.instagram.com\/gorkiy_bar\/",
+  "Telegram": "https:\/\/t.me\/gorkiybar_ch"
+ },
+ {
+  "Заведения": "RAIL Bottle Shop",
+  "Vk": "https:\/\/vk.com\/rail_bs"
+ }
 ]

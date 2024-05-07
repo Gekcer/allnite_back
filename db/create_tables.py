@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, Date, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base
 
-engine = create_engine("sqlite:///all_nite_db.db", echo=True)
+engine = create_engine("sqlite:///all_nite.db", echo=True)
 
 Base = declarative_base()
 
@@ -15,6 +15,7 @@ class Bar(Base):
     tg_url = Column(String, nullable=True)
     inst_url = Column(String, nullable=True)
 
+
 class ActivityInfo(Base):
     __tablename__ = 'ACTIVITYINFO'
 
@@ -24,7 +25,7 @@ class ActivityInfo(Base):
     description = Column(String, nullable=True)
     date = Column(Date, nullable=True)
 
-    bar = relationship('Bar', order_by=Bar.id, back_populates='bar')
+    bar = relationship('Bar')
 
 
 Base.metadata.create_all(engine)

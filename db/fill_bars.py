@@ -1,10 +1,22 @@
-from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, Integer, String
+import json
 
-Base = declarative_base()
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from create_tables import Bar
 
-class Bar(Base):
-    __tablename__ = 'bar'
+engine = create_engine("sqlite:///all_nite.db", echo=True)
 
-    id = Column(Integer, primary_key=True)
-    name = Column(Integer, )
+with open('bars.json', 'r', encoding='utf-8') as j:
+    bars_json = json.load(j)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+with session:
+    for bar in bars_json:
+        bar_to_add = Bar(name=bar.get('Заведения'),
+                         vk_url=bar.get('VK'),
+                         tg_url=bar.get('Telegram'),
+                         inst_url=bar.get('Instagram'))
+        session.add(bar_to_add)
+        session.commit()

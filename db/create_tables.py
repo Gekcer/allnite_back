@@ -9,7 +9,7 @@ Base = declarative_base()
 class Bar(Base):
     __tablename__ = 'BAR'
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, autoincrement=True, primary_key=True)
     name = Column(String, nullable=False)
     vk_url = Column(String, nullable=True)
     tg_url = Column(String, nullable=True)

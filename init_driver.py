@@ -68,7 +68,6 @@ def get_chrome_driver(use_proxy=False, user_agent=None):
     chrome_options = webdriver.ChromeOptions()
 
     if use_proxy:
-        #chrome_options.add_argument('--proxy-server=46.3.187.199:8000')
         plugin_file = 'proxy_auth_plugin.zip'
         with zipfile.ZipFile(plugin_file, 'w') as zp:
             zp.writestr('manifest.json', manifest_json)
@@ -77,6 +76,8 @@ def get_chrome_driver(use_proxy=False, user_agent=None):
 
     if user_agent:
         chrome_options.add_argument(f'--user-agent={user_agent}')
+
+    chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 
     driver = webdriver.Chrome(options=chrome_options)
     return driver

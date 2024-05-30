@@ -15,8 +15,8 @@ session = Session()
 with session:
     for bar in bars_json:
         bar_to_add = Bar(name=bar.get('Заведения'),
-                         vk_url=bar.get('VK'),
-                         tg_url=bar.get('Telegram'),
-                         inst_url=bar.get('Instagram'))
+                         vk_url=bar.get('Вконтакте'),
+                         tg_url=bar.get('Телеграм'),
+                         inst_url=bar.get('Инстаграм'))
         session.add(bar_to_add)
         session.commit()

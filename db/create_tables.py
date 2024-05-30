@@ -16,14 +16,15 @@ class Bar(Base):
     inst_url = Column(String, nullable=True)
 
 
-class ActivityInfo(Base):
-    __tablename__ = 'ACTIVITYINFO'
+class EventInfo(Base):
+    __tablename__ = 'EVENTINFO'
 
     id = Column(Integer, primary_key=True)
-    bar_id = Column(Integer, ForeignKey('BAR.id'))
+    bar_name = Column(String, ForeignKey('BAR.name'))
     media = Column(String, nullable=False)
     description = Column(String, nullable=True)
     date = Column(Date, nullable=True)
+    post_url = Column(String, nullable=True)
 
     bar = relationship('Bar')
 

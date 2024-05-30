@@ -1,6 +1,7 @@
 import os
 import time
 import pickle
+import datetime
 
 from dotenv import load_dotenv
 from selenium.webdriver.common.by import By
@@ -21,7 +22,7 @@ INSTAGRAM_PASS = os.getenv('INSTAGRAM_PASS')
 class InstagramParser:
     instagram_url = 'https://instagram.com'
     driver = get_chrome_driver(use_proxy=True, user_agent=True)
-    media_db_interface = MediaDBInterface()
+    media_db_interface = MediaDBInterface('inst')
 
     texts = []
     @classmethod
@@ -69,22 +70,20 @@ class InstagramParser:
 
     @classmethod
     def get_post_urls(cls, bar_name):
-        url = cls.media_db_interface.get_media_url_by_bar_name(bar_name, 'inst')
+        url = cls.media_db_interface.get_media_url_by_bar_name(bar_name)
 
         cls.driver.get(url)
-        time.sleep(8)
-
-        cls.driver.execute_script("window.scrollBy(0, 2000);")
-        time.sleep(8)
+        time.sleep(3)
 
         elements = cls.driver.find_elements(By.TAG_NAME, 'a')
         post_urls = [x.get_attribute('href') for x in elements if '/p/' in x.get_attribute('href') or '/reel/' in x.get_attribute('href')]
-        time.sleep(8)
+        post_urls = post_urls[0:3]
+        time.sleep(3)
         return post_urls
 
     @classmethod
     def get_chunks(cls, chunk_size=4):
-        bar_names = cls.media_db_interface.get_all_bar_names(media='inst')
+        bar_names = cls.media_db_interface.get_all_bar_names()
         bar_names_chunks = [bar_names[x:x+chunk_size] for x in range(0, len(bar_names), chunk_size)]
         return bar_names_chunks
 
@@ -93,6 +92,7 @@ class InstagramParser:
         post_urls = cls.get_post_urls(bar_name)
         bar_post_texts = []
         bar_post_urls = []
+        bar_event_date = []
         for post_url in post_urls:
             time.sleep(8)
             print(post_url)
@@ -109,7 +109,6 @@ class InstagramParser:
             else:
                 print(f"Пропускаем {post_url} бара {bar_name}")
                 continue
-            #WebDriverWait(cls.driver, 20).until(EC.presence_of_all_elements_located((By.TAG_NAME, 'span')))
             time.sleep(8)
             elements = cls.driver.find_elements(By.TAG_NAME, 'span')
             for elem in elements:
@@ -117,24 +116,25 @@ class InstagramParser:
                     if elem.find_elements(By.TAG_NAME, 'br'):
                         bar_post_texts.append(elem.text)
                         bar_post_urls.append(post_url)
+                        bar_event_date.append(datetime.datetime.now())
                 except StaleElementReferenceException:
                     print(f"Элемент стал неактивным, {post_url}, {bar_name}")
                     continue
-        return bar_post_texts, bar_post_urls
+        return bar_post_texts, bar_post_urls, bar_event_date
 
 
     @classmethod
     def save_all_bars_text(cls, chunk):
         for bar_name in chunk:
-            data = []
+            #data = []
             print(f'Запись бара {bar_name}')
-            bar_post_texts, bar_post_urls = cls.save_bar_post_text(bar_name)
+            bar_post_texts, bar_post_urls, bar_event_date = cls.save_bar_post_text(bar_name)
             for _ in range(len(bar_post_texts)):
-                data.append({'bar_name': bar_name, 'bar_post_text': bar_post_texts[_], 'bar_post_url': bar_post_urls[_]})
-            data_df = pd.DataFrame(data)
-            bar_name_cleaned = bar_name.replace(',', '_').replace('?', '')
-            data_df.to_csv(f'bar_texts_{bar_name_cleaned}.csv', encoding='utf_8')
-
+                data_row = {'bar_name': bar_name,
+                            'bar_post_text': bar_post_texts[_],
+                            'bar_event_date': bar_event_date[_],
+                            'bar_post_url': bar_post_urls[_]}
+                cls.media_db_interface.insert_into_db_full_event_info(data_row)
 
     @classmethod
     def save_bar_post_screenshot(cls, bar_name):
@@ -154,7 +154,7 @@ class InstagramParser:
 
 if __name__ == '__main__':
     chunks = InstagramParser.get_chunks()
-    chunks = chunks[0:3]
+    chunks = chunks[4:5]
     for chunk in chunks:
         print(chunk)
     for i, chunk in enumerate(chunks):
@@ -164,9 +164,5 @@ if __name__ == '__main__':
             InstagramParser.driver = get_chrome_driver(use_proxy=True, user_agent=True)
         InstagramParser.instagram_first_login()
         InstagramParser.save_all_bars_text(chunk)
-        #InstagramParser.save_all_bars_text_alternative(chunk)
         InstagramParser.driver.quit()
         time.sleep(1)
-
-    #InstagramParser.prepare_df_bar_texts(dfs)
-

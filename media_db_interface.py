@@ -32,9 +32,10 @@ class MediaDBInterface:
         table = Table(table_name, self.metadata, autoload_with=self.engine)
         return table
 
-    def get_all_bar_names(self):
+    def get_all_bar_names(self, media):
         table = self.get_object_from_table('BAR')
-        stmt = select(table.c['name'])
+        media_column = f'{media}_url'
+        stmt = select(table.c['name']).where(table.c[media_column] != None)
         names = []
         with self.get_session() as session:
             result = session.execute(stmt)

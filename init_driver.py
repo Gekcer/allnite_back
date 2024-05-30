@@ -11,6 +11,10 @@ PROXY_PORT = os.getenv('PROXY_PORT')
 PROXY_USER = os.getenv('PROXY_USER')
 PROXY_PASS = os.getenv('PROXY_PASS')
 
+my_user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.79 Safari/537.36'
+#my_user_agent = 'my_bot'
+#my_user_agent = 'hello_world'
+
 manifest_json = """
 {
     "version": "1.0.0",
@@ -64,7 +68,7 @@ chrome.webRequest.onAuthRequired.addListener(
 """ % (PROXY_HOST, PROXY_PORT, PROXY_USER, PROXY_PASS)
 
 
-def get_chrome_driver(use_proxy=False, user_agent=None):
+def get_chrome_driver(use_proxy=False, user_agent=False):
     chrome_options = webdriver.ChromeOptions()
 
     if use_proxy:
@@ -75,8 +79,9 @@ def get_chrome_driver(use_proxy=False, user_agent=None):
         chrome_options.add_extension(plugin_file)
 
     if user_agent:
-        chrome_options.add_argument(f'--user-agent={user_agent}')
+        chrome_options.add_argument(f'--user-agent={my_user_agent}')
 
+    #chrome_options.add_experimental_option("excludeSwitches", ["disable-automation"])
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 
     driver = webdriver.Chrome(options=chrome_options)

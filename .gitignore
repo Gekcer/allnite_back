@@ -1,0 +1,12 @@
+.env
+
+.idea/
+cookies/
+__pycache__/
+venv310/
+db/__pycache__/
+
+db/all_nite.db
+db/bars.json
+test.py
+launch_browser.py

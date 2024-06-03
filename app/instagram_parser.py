@@ -154,7 +154,7 @@ class InstagramParser:
 
 if __name__ == '__main__':
     chunks = InstagramParser.get_chunks()
-    chunks = chunks[4:5]
+    chunks = chunks[8:9]
     for chunk in chunks:
         print(chunk)
     for i, chunk in enumerate(chunks):

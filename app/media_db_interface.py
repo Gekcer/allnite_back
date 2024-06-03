@@ -3,7 +3,7 @@ import os
 from sqlalchemy import create_engine, MetaData, Table, select
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
-from db.create_tables import EventInfo
+from ..db.create_tables import EventInfo
 
 load_dotenv()
 

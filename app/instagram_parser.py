@@ -1,3 +1,4 @@
+import sys
 import os
 import time
 import pickle
@@ -12,6 +13,8 @@ from selenium.common.exceptions import StaleElementReferenceException
 
 from init_driver import get_chrome_driver
 from media_db_interface import MediaDBInterface
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 load_dotenv()
 

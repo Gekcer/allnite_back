@@ -1,16 +1,24 @@
 import os
+import sys
+
+sys.path.append('../')
 
 from sqlalchemy import create_engine, MetaData, Table, select
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
-from ..db.create_tables import EventInfo
+from db.create_tables import EventInfo
 
 load_dotenv()
 
 DB_FOLDER = os.getenv('DB_FOLDER')
 DB_NAME = os.getenv('DB_NAME')
-DB_URL = f'sqlite:///{os.path.join(DB_FOLDER, DB_NAME)}'
-
+DB_PATH = os.path.join(os.path.dirname(__file__), f'../{DB_FOLDER}', DB_NAME)
+print(DB_PATH)
+print(DB_PATH)
+print(DB_PATH)
+print(DB_PATH)
+print(DB_PATH)
+DB_URL = f'sqlite:///{DB_PATH}'
 
 class MediaDBInterface:
     def __new__(cls, media):
@@ -60,8 +68,10 @@ class MediaDBInterface:
             session.commit()
         return self
 
+
 class MediaDBInterfaceVK(MediaDBInterface):
     pass
+
 
 class MediaDBInterfaceInst(MediaDBInterface):
     def get_all_bar_names(self):
@@ -82,6 +92,7 @@ class MediaDBInterfaceInst(MediaDBInterface):
             result = session.execute(stmt)
             result = result.fetchone()[0]
         return result
+
 
 class MediaDBInterfaceTG(MediaDBInterface):
     pass
